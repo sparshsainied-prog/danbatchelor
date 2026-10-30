@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Dan Batchelor · Jack Palmer</title>
+<meta name="description" content="A homepage idea made by Sparsh Saini for Dan Batchelor. Not his official site.">
+<meta property="og:title" content="Dan Batchelor · Jack Palmer (a homepage idea)">
+<meta property="og:description" content="A homepage idea made by Sparsh Saini for Dan Batchelor. Not his official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/danbatchelor/img/og.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700&family=Saira:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/bg1.jpg"><link rel="preload" as="image" href="img/jp1.webp">
+<style>
+:root{--blue:#1c5fb3;--navy:#050b24;--red:#ee5b2a;--green:#4fa66a;--ink:#f4f6fb;--soft:#9fb1d4;--glow:#bfe4ff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--navy)}
+body{background:var(--navy);color:var(--ink);font:1.08rem/1.65 "Saira",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--glow)}
+.strip{background:#02061a;color:var(--soft);font-size:.85rem;text-align:center;padding:.5rem 16px}
+.t{font-family:"Saira Condensed",sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.02em}
+nav.top{position:fixed;z-index:30;right:12px;top:48px;display:flex;gap:1rem;background:rgba(5,11,36,.88);border:1px solid rgba(191,228,255,.35);padding:.5rem 1rem}
+nav.top a{color:var(--ink);text-decoration:none;font:600 .95rem "Saira Condensed",sans-serif;letter-spacing:.08em;text-transform:uppercase}
+@media(max-width:700px){nav.top{top:auto;bottom:12px;right:50%;transform:translateX(50%);white-space:nowrap}}
+.hero{position:relative;height:320vh}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--navy)}
+.bg{position:absolute;inset:-2%;width:104%;height:104%;object-fit:cover;opacity:0;will-change:opacity}
+#bg1{opacity:1}
+.bk{position:absolute;left:0;top:0;width:var(--bw);will-change:transform,opacity;opacity:0}
+.bk img{display:block;width:100%;height:auto;filter:drop-shadow(0 24px 30px rgba(0,0,0,.55))}
+#b1{opacity:1}
+.copy{position:absolute;z-index:4;left:20px;right:20px;bottom:76px;text-align:center}
+.copy h1{font-size:clamp(2.6rem,12vw,4.6rem);line-height:.95;text-shadow:0 2px 24px rgba(0,0,0,.6)}
+.copy .lab{font:600 1.35rem "Saira Condensed",sans-serif;letter-spacing:.14em;text-transform:uppercase;margin:.4rem 0 1rem;min-height:1.6rem;color:var(--glow);text-shadow:0 2px 14px #000}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center}
+.btn{font:700 1rem "Saira Condensed",sans-serif;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:#06102e;background:var(--glow);padding:.7rem 1.4rem;clip-path:polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px)}
+.btn.o{background:rgba(5,11,36,.7);color:var(--ink);box-shadow:inset 0 0 0 1px var(--glow)}
+@media(max-width:899px){.stage::after{content:"";position:absolute;left:0;right:0;bottom:0;height:42%;background:linear-gradient(transparent,rgba(5,11,36,.9) 60%);pointer-events:none;z-index:3}}
+@media(min-width:900px){.copy{left:auto;right:6vw;width:36vw;top:50%;bottom:auto;transform:translateY(-50%);text-align:left}.btns{justify-content:flex-start}}
+section.s{max-width:1040px;margin:0 auto;padding:5.5rem 20px}
+h2{font-size:clamp(2rem,6vw,3.2rem);line-height:1;margin-bottom:1.4rem;color:var(--ink)}
+.bkrow{display:grid;gap:2rem;align-items:center;margin-bottom:3.5rem;padding:2rem 1.3rem;position:relative;overflow:hidden}
+.bkrow>*{position:relative}
+.bkrow::before{content:"";position:absolute;inset:0;background:var(--bgi) center/cover;opacity:.9}
+.bkrow img{width:min(220px,60%);display:block;margin:0 auto;filter:drop-shadow(0 20px 24px rgba(0,0,0,.55))}
+.bkrow>div{background:rgba(5,11,36,.72);padding:1.2rem 1.3rem}
+.bkrow p{margin-bottom:.8rem;max-width:56ch}
+@media(min-width:780px){.bkrow{grid-template-columns:260px 1fr;gap:3rem;padding:2.2rem}}
+.about{max-width:60ch}
+.about p{margin-bottom:1rem}
+.fair{border:1px solid var(--glow);padding:2rem 1.4rem;display:grid;gap:1rem;align-items:center;background:#091337}
+@media(min-width:780px){.fair{grid-template-columns:1fr auto}}
+.fair .big{color:var(--glow);font-size:clamp(2.2rem,8vw,3.8rem);line-height:1}
+.find{margin-top:2.2rem}
+footer{text-align:center;color:var(--soft);font-size:.9rem;padding:3rem 16px 6rem;border-top:1px solid rgba(191,228,255,.2)}
+@media (prefers-reduced-motion:reduce){.hero{height:auto}.stage{position:relative;height:auto;padding:2rem 20px 7rem;min-height:100svh}.bk{position:relative;margin:0 auto 1rem;width:min(60vw,260px)!important;transform:none!important}.copy{position:relative;left:auto;right:auto;bottom:auto;top:auto;width:auto;transform:none!important;text-align:center}.btns{justify-content:center}.stage::after{display:none}}
+</style>
+</head>
+<body>
+<div class="strip">A homepage idea made by Sparsh Saini for Dan Batchelor. Not his official site.</div>
+<nav class="top" aria-label="Sections"><a href="#books">Books</a><a href="#dan">Dan</a><a href="#meet">Events</a></nav>
+<header class="hero">
+  <div class="stage" id="stage">
+    <img class="bg" id="bg1" src="img/bg1.jpg" alt="">
+    <img class="bg" id="bg2" src="img/bg2.jpg" alt="">
+    <img class="bg" id="bg3" src="img/bg3.jpg" alt="">
+    <div class="bk" id="b1" role="img" aria-label="Jack Palmer: A New Order, a dark blue cover with six glowing alien eyes"><img src="img/jp1.webp" alt="" width="580" height="900"></div>
+    <div class="bk" id="b2" role="img" aria-label="Jack Palmer II: The Resistance, a red planet with a boy and an alien in silhouette"><img src="img/jp2.webp" alt="" width="566" height="900"></div>
+    <div class="bk" id="b3" role="img" aria-label="Jack Palmer III: Redemption, a green Earth with an alien peering up from below"><img src="img/jp3.webp" alt="" width="599" height="900"></div>
+    <div class="copy" id="copy">
+      <h1 class="t">Jack Palmer</h1>
+      <div class="lab" id="lab">A New Order</div>
+      <div class="btns"><a class="btn" href="https://www.waterstones.com/book/jack-palmer-a-new-order/dan-batchelor/9781803782874">Start with book one</a><a class="btn o" href="#meet">See me this December</a></div>
+    </div>
+  </div>
+</header>
+<main>
+<section class="s" id="books">
+  <h2 class="t">Three books. One war.</h2>
+  <div class="bkrow" style="--bgi:url(img/bg1.jpg)">
+    <img src="img/jp1.webp" alt="Jack Palmer: A New Order" width="580" height="900" loading="lazy">
+    <div><h3 class="t" style="font-size:1.8rem">Jack Palmer: A New Order</h3>
+    <p>In the movies I watched growing up, when aliens invaded, humans came together to save the world. In this story, things go very differently.</p>
+    <div class="btns" style="justify-content:flex-start"><a class="btn" href="https://www.waterstones.com/book/jack-palmer-a-new-order/dan-batchelor/9781803782874">Waterstones</a><a class="btn o" href="https://www.amazon.co.uk/dp/1803782870">Amazon</a></div></div>
+  </div>
+  <div class="bkrow" style="--bgi:url(img/bg2.jpg)">
+    <img src="img/jp2.webp" alt="Jack Palmer II: The Resistance" width="566" height="900" loading="lazy">
+    <div><h3 class="t" style="font-size:1.8rem">Jack Palmer II: The Resistance</h3>
+    <p>The Resistance has grown in the shadows since long before the Elders' invasion. Now their secret is out, and with the Elders' supreme leader hunting every last traitor, they are outgunned, outnumbered and forced into hiding. This is a war humanity cannot win alone.</p>
+    <div class="btns" style="justify-content:flex-start"><a class="btn" href="https://www.waterstones.com/book/jack-palmer-the-resistance/dan-batchelor/9781803784168">Waterstones</a><a class="btn o" href="https://www.amazon.co.uk/dp/B0H3L6KGVF">Kindle</a></div></div>
+  </div>
+  <div class="bkrow" style="--bgi:url(img/bg3.jpg)">
+    <img src="img/jp3.webp" alt="Jack Palmer III: Redemption" width="599" height="900" loading="lazy">
+    <div><h3 class="t" style="font-size:1.8rem">Jack Palmer III: Redemption</h3>
+    <p>The third book is up for preorder now.</p>
+    <div class="btns" style="justify-content:flex-start"><a class="btn" href="https://www.waterstones.com/book/jack-palmer-redemption/dan-batchelor/9781803784465">Preorder at Waterstones</a><a class="btn o" href="https://www.amazon.co.uk/dp/1803784466">Amazon</a></div></div>
+  </div>
+</section>
+<section class="s" id="dan">
+  <h2 class="t">Dan</h2>
+  <div class="about">
+    <p>I'm a primary school teacher, and I was diagnosed with dyslexia late. I wanted to show my pupils that anything is possible.</p>
+    <p>So I made Jack Palmer a relatable, engaging hero in a story that's a playful, fun way into science fiction while staying rooted in reality, with morality, power and friendship at its heart.</p>
+  </div>
+</section>
+<section class="s" id="meet">
+  <div class="fair">
+    <div>
+      <h2 class="t" style="margin-bottom:.5rem">Come and find me</h2>
+      <p>Christmas Book Bonanza, The Alan, 18 Princess Street, Manchester. 12 to 4pm.</p>
+      <p><a href="https://www.eventbrite.com/e/christmas-book-bonanza-manchester-tickets-1990714119520">Tickets</a></p>
+    </div>
+    <div class="big t">Sat 5 Dec</div>
+  </div>
+  <p class="find">More at <a href="https://www.jackpalmerseries.co.uk">jackpalmerseries.co.uk</a>, and on <a href="https://www.instagram.com/dbatch.jp/">Instagram</a>.</p>
+</section>
+</main>
+<footer>A mockup made by Sparsh Saini for Dan Batchelor. Not affiliated, not live.</footer>
+<script>
+(()=>{const hero=document.querySelector('.hero'),stage=document.getElementById('stage'),lab=document.getElementById('lab'),copy=document.getElementById('copy'),bg=[1,2,3].map(i=>document.getElementById('bg'+i)),bk=[1,2,3].map(i=>document.getElementById('b'+i));
+if(matchMedia('(prefers-reduced-motion: reduce)').matches){bk[0].style.opacity=1;return}
+const names=['A New Order','The Resistance','Redemption, preorder now'];let W,H,bw,bh,rx,ry,ht,tick=false,cur=-1;const cl=v=>Math.max(0,Math.min(1,v)),eio=t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;
+function measure(){W=innerWidth;H=stage.clientHeight;const d=W>=900;bw=d?Math.min(H*.7*.64,W*.3):Math.min(W*.56,H*.46*.64);bh=bw/.64;bk.forEach(b=>b.style.setProperty('--bw',bw+'px'));rx=d?W*.3-bw/2:W/2-bw/2;ry=d?H/2-bh/2:H*.07;ht=hero.offsetHeight-H;draw()}
+function draw(){tick=false;const p=cl((scrollY-hero.offsetTop)/ht);
+ // three hops: 0-.3 book one, .3-.36 swap, .36-.66 book two, .66-.72 swap, then book three
+ const a=eio(cl((p-.3)/.1)),b=eio(cl((p-.62)/.1));
+ bg[0].style.opacity=1;bg[1].style.opacity=a;bg[2].style.opacity=b;
+ const o=[1-a,a*(1-b),b];
+ bk.forEach((e,i)=>{const sw=i==0?a:i==1?(b>0?b:1-a):1-b;const dir=i==0?-1:1;const slide=i==0?-a:i==1?(1-a)-b:(1-b);
+  e.style.opacity=o[i].toFixed(3);e.style.transform=`translate(${rx}px,${ry+(i==0?-a*bh*.12:i==1?(1-a)*bh*.12-b*bh*.12:(1-b)*bh*.12)}px) scale(${.96+.04*o[i]})`});
+ const s=p<.36?0:p<.68?1:2;if(s!==cur){cur=s;lab.textContent=names[s]}
+}
+addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(draw)}},{passive:true});addEventListener('resize',measure);measure()})();
+</script>
+</body>
+</html>
