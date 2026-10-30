@@ -24,13 +24,13 @@ a{color:var(--glow)}
 nav.top{position:fixed;z-index:30;right:12px;top:48px;display:flex;gap:1rem;background:rgba(5,11,36,.88);border:1px solid rgba(191,228,255,.35);padding:.5rem 1rem}
 nav.top a{color:var(--ink);text-decoration:none;font:600 .95rem "Saira Condensed",sans-serif;letter-spacing:.08em;text-transform:uppercase}
 @media(max-width:700px){nav.top{top:auto;bottom:12px;right:50%;transform:translateX(50%);white-space:nowrap}}
-.hero{position:relative;height:320vh}
+.hero{position:relative;height:400vh}
 .stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--navy)}
 .bg{position:absolute;inset:-2%;width:104%;height:104%;object-fit:cover;opacity:0;will-change:opacity}
-#bg1{opacity:1}
-.bk{position:absolute;left:0;top:0;width:var(--bw);will-change:transform,opacity;opacity:0}
-.bk img{display:block;width:100%;height:auto;filter:drop-shadow(0 24px 30px rgba(0,0,0,.55))}
-#b1{opacity:1}
+.bk{position:absolute;left:0;top:0;width:var(--bw);will-change:transform}
+.bk #cv{display:block;width:100%;height:auto;opacity:0;will-change:opacity}
+.bk .eye{position:absolute;height:auto;opacity:0;transform:scaleY(.08);will-change:transform,opacity}
+.copy{opacity:0;will-change:opacity}
 .copy{position:absolute;z-index:4;left:20px;right:20px;bottom:76px;text-align:center}
 .copy h1{font-size:clamp(2.6rem,12vw,4.6rem);line-height:.95;text-shadow:0 2px 24px rgba(0,0,0,.6)}
 .copy .lab{font:600 1.35rem "Saira Condensed",sans-serif;letter-spacing:.14em;text-transform:uppercase;margin:.4rem 0 1rem;min-height:1.6rem;color:var(--glow);text-shadow:0 2px 14px #000}
@@ -55,7 +55,7 @@ h2{font-size:clamp(2rem,6vw,3.2rem);line-height:1;margin-bottom:1.4rem;color:var
 .fair .big{color:var(--glow);font-size:clamp(2.2rem,8vw,3.8rem);line-height:1}
 .find{margin-top:2.2rem}
 footer{text-align:center;color:var(--soft);font-size:.9rem;padding:3rem 16px 6rem;border-top:1px solid rgba(191,228,255,.2)}
-@media (prefers-reduced-motion:reduce){.hero{height:auto}.stage{position:relative;height:auto;padding:2rem 20px 7rem;min-height:100svh}.bk{position:relative;margin:0 auto 1rem;width:min(60vw,260px)!important;transform:none!important}.copy{position:relative;left:auto;right:auto;bottom:auto;top:auto;width:auto;transform:none!important;text-align:center}.btns{justify-content:center}.stage::after{display:none}}
+@media (prefers-reduced-motion:reduce){.hero{height:auto}.stage{position:relative;height:auto;padding:2rem 20px 7rem;min-height:100svh}.bk{position:relative;margin:0 auto 1rem;width:min(60vw,260px)!important;transform:none!important}.bk #cv,.bg,.copy{opacity:1!important}.bk .eye{display:none}.copy{position:relative;left:auto;right:auto;bottom:auto;top:auto;width:auto;transform:none!important;text-align:center}.btns{justify-content:center}.stage::after{display:none}}
 </style>
 </head>
 <body>
@@ -64,14 +64,10 @@ footer{text-align:center;color:var(--soft);font-size:.9rem;padding:3rem 16px 6re
 <header class="hero">
   <div class="stage" id="stage">
     <img class="bg" id="bg1" src="img/bg1.jpg" alt="">
-    <img class="bg" id="bg2" src="img/bg2.jpg" alt="">
-    <img class="bg" id="bg3" src="img/bg3.jpg" alt="">
-    <div class="bk" id="b1" role="img" aria-label="Jack Palmer: A New Order, a dark blue cover with six glowing alien eyes"><img src="img/jp1.webp" alt="" width="580" height="900"></div>
-    <div class="bk" id="b2" role="img" aria-label="Jack Palmer II: The Resistance, a red planet with a boy and an alien in silhouette"><img src="img/jp2.webp" alt="" width="566" height="900"></div>
-    <div class="bk" id="b3" role="img" aria-label="Jack Palmer III: Redemption, a green Earth with an alien peering up from below"><img src="img/jp3.webp" alt="" width="599" height="900"></div>
+    <div class="bk" id="b1" role="img" aria-label="Jack Palmer: A New Order, a dark blue cover with six glowing alien eyes"><img id="cv" src="img/jp1.webp" alt="" width="559" height="900"><img class="eye" src="img/eye1.webp" alt="" style="left:8.625%;top:14.824%;width:16.442%"><img class="eye" src="img/eye2.webp" alt="" style="left:33.423%;top:15.662%;width:19.542%"><img class="eye" src="img/eye3.webp" alt="" style="left:60.916%;top:13.568%;width:18.733%"><img class="eye" src="img/eye4.webp" alt="" style="left:62.534%;top:74.121%;width:18.329%"><img class="eye" src="img/eye5.webp" alt="" style="left:33.962%;top:76.717%;width:18.598%"><img class="eye" src="img/eye6.webp" alt="" style="left:8.221%;top:71.692%;width:17.116%"></div>
     <div class="copy" id="copy">
       <h1 class="t">Jack Palmer</h1>
-      <div class="lab" id="lab">A New Order</div>
+      <div class="lab">A New Order</div>
       <div class="btns"><a class="btn" href="https://www.waterstones.com/book/jack-palmer-a-new-order/dan-batchelor/9781803782874">Start with book one</a><a class="btn o" href="#meet">See me this December</a></div>
     </div>
   </div>
@@ -80,19 +76,19 @@ footer{text-align:center;color:var(--soft);font-size:.9rem;padding:3rem 16px 6re
 <section class="s" id="books">
   <h2 class="t">Three books. One war.</h2>
   <div class="bkrow" style="--bgi:url(img/bg1.jpg)">
-    <img src="img/jp1.webp" alt="Jack Palmer: A New Order" width="580" height="900" loading="lazy">
+    <img src="img/jp1.webp" alt="Jack Palmer: A New Order" width="559" height="900" loading="lazy">
     <div><h3 class="t" style="font-size:1.8rem">Jack Palmer: A New Order</h3>
     <p>In the movies I watched growing up, when aliens invaded, humans came together to save the world. In this story, things go very differently.</p>
     <div class="btns" style="justify-content:flex-start"><a class="btn" href="https://www.waterstones.com/book/jack-palmer-a-new-order/dan-batchelor/9781803782874">Waterstones</a><a class="btn o" href="https://www.amazon.co.uk/dp/1803782870">Amazon</a></div></div>
   </div>
   <div class="bkrow" style="--bgi:url(img/bg2.jpg)">
-    <img src="img/jp2.webp" alt="Jack Palmer II: The Resistance" width="566" height="900" loading="lazy">
+    <img src="img/jp2.webp" alt="Jack Palmer II: The Resistance" width="554" height="900" loading="lazy">
     <div><h3 class="t" style="font-size:1.8rem">Jack Palmer II: The Resistance</h3>
     <p>The Resistance has grown in the shadows since long before the Elders' invasion. Now their secret is out, and with the Elders' supreme leader hunting every last traitor, they are outgunned, outnumbered and forced into hiding. This is a war humanity cannot win alone.</p>
     <div class="btns" style="justify-content:flex-start"><a class="btn" href="https://www.waterstones.com/book/jack-palmer-the-resistance/dan-batchelor/9781803784168">Waterstones</a><a class="btn o" href="https://www.amazon.co.uk/dp/B0H3L6KGVF">Kindle</a></div></div>
   </div>
   <div class="bkrow" style="--bgi:url(img/bg3.jpg)">
-    <img src="img/jp3.webp" alt="Jack Palmer III: Redemption" width="599" height="900" loading="lazy">
+    <img src="img/jp3.webp" alt="Jack Palmer III: Redemption" width="555" height="900" loading="lazy">
     <div><h3 class="t" style="font-size:1.8rem">Jack Palmer III: Redemption</h3>
     <p>The third book is up for preorder now.</p>
     <div class="btns" style="justify-content:flex-start"><a class="btn" href="https://www.waterstones.com/book/jack-palmer-redemption/dan-batchelor/9781803784465">Preorder at Waterstones</a><a class="btn o" href="https://www.amazon.co.uk/dp/1803784466">Amazon</a></div></div>
@@ -119,19 +115,17 @@ footer{text-align:center;color:var(--soft);font-size:.9rem;padding:3rem 16px 6re
 </main>
 <footer>A mockup made by Sparsh Saini for Dan Batchelor. Not affiliated, not live.</footer>
 <script>
-(()=>{const hero=document.querySelector('.hero'),stage=document.getElementById('stage'),lab=document.getElementById('lab'),copy=document.getElementById('copy'),bg=[1,2,3].map(i=>document.getElementById('bg'+i)),bk=[1,2,3].map(i=>document.getElementById('b'+i));
-if(matchMedia('(prefers-reduced-motion: reduce)').matches){bk[0].style.opacity=1;return}
-const names=['A New Order','The Resistance','Redemption, preorder now'];let W,H,bw,bh,rx,ry,ht,tick=false,cur=-1;const cl=v=>Math.max(0,Math.min(1,v)),eio=t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;
-function measure(){W=innerWidth;H=stage.clientHeight;const d=W>=900;bw=d?Math.min(H*.7*.64,W*.3):Math.min(W*.56,H*.46*.64);bh=bw/.64;bk.forEach(b=>b.style.setProperty('--bw',bw+'px'));rx=d?W*.3-bw/2:W/2-bw/2;ry=d?H/2-bh/2:H*.07;ht=hero.offsetHeight-H;draw()}
+(()=>{const hero=document.querySelector('.hero'),stage=document.getElementById('stage'),copy=document.getElementById('copy'),bg=document.getElementById('bg1'),bk=document.getElementById('b1'),cv=document.getElementById('cv'),eyes=[...bk.querySelectorAll('.eye')];
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+let W,H,bw,bh,rx,ry,ht,tick=false;const cl=v=>Math.max(0,Math.min(1,v)),eo=t=>1-Math.pow(1-t,3),eio=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+function measure(){W=innerWidth;H=stage.clientHeight;const d=W>=900;bw=d?Math.min(H*.72*.62,W*.3):Math.min(W*.6,H*.5*.62);bh=bw/.62;bk.style.setProperty('--bw',bw+'px');rx=d?W*.3-bw/2:W/2-bw/2;ry=d?H/2-bh/2:H*.06;ht=hero.offsetHeight-H;draw()}
 function draw(){tick=false;const p=cl((scrollY-hero.offsetTop)/ht);
- // three hops: 0-.3 book one, .3-.36 swap, .36-.66 book two, .66-.72 swap, then book three
- const a=eio(cl((p-.3)/.1)),b=eio(cl((p-.62)/.1));
- bg[0].style.opacity=1;bg[1].style.opacity=a;bg[2].style.opacity=b;
- const o=[1-a,a*(1-b),b];
- bk.forEach((e,i)=>{const sw=i==0?a:i==1?(b>0?b:1-a):1-b;const dir=i==0?-1:1;const slide=i==0?-a:i==1?(1-a)-b:(1-b);
-  e.style.opacity=o[i].toFixed(3);e.style.transform=`translate(${rx}px,${ry+(i==0?-a*bh*.12:i==1?(1-a)*bh*.12-b*bh*.12:(1-b)*bh*.12)}px) scale(${.96+.04*o[i]})`});
- const s=p<.36?0:p<.68?1:2;if(s!==cur){cur=s;lab.textContent=names[s]}
-}
+ // dark: six pairs of eyes open round the ring, one alien at a time, each with a blink; then the light comes up on whose eyes they are
+ eyes.forEach((e,i)=>{const x=cl((p+.03-i*.075)/.09);const bl=x<1?Math.min(1,x*1.6):1;const blink=Math.sin(Math.PI*cl((x-.62)/.38));
+  e.style.opacity=(cl(x*2)*(1-cl((p-.72)/.08))).toFixed(3);e.style.transform=`scaleY(${Math.max(.06,eo(bl)*(1-.92*blink)).toFixed(3)})`});
+ const l=eio(cl((p-.52)/.24));cv.style.opacity=l.toFixed(3);bg.style.opacity=(l*.95).toFixed(3);
+ const z=eio(cl((p-.5)/.3));bk.style.transform=`translate(${rx}px,${ry}px) scale(${1.35-.35*z})`;
+ const c=cl((p-.8)/.14);copy.style.opacity=c.toFixed(3);copy.style.transform=(W>=900?'translateY(-50%) ':'')+`translateY(${(1-c)*14}px)`}
 addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(draw)}},{passive:true});addEventListener('resize',measure);measure()})();
 </script>
 </body>
